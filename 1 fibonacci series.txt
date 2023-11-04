@@ -1,0 +1,41 @@
+1 fibonacci series
+
+def fibonacci(n):
+    if(n<=1):
+        return n
+    else:
+        return (fibonacci(n-1)+fibonacci(n-2))
+        
+n=int(input("Enter number of term print:"))
+print("fibonacci sequence")
+for i in range(n):
+    print(fibonacci(i))
+
+
+
+2====
+
+a = 0
+b = 1
+num = int(input("enter a number to obtain fibonacci sequence:"))
+
+if num ==1:
+    print (a)
+else:
+    print(a)
+    print(b)
+    for i in range (2, num):
+        c = a + b 
+        a = b
+        b = c
+        print (c)
+
+
+
+
+
+
+
+
+
+
