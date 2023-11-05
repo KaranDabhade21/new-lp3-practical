@@ -18,3 +18,16 @@ W = 50
 n = len(val)
 print(knapSack(W, wt, val, n))
 
+
+
+
+
+
+
+
+
+To solve the 0-1 Knapsack problem using dynamic programming, you'd write a program that efficiently determines the most valuable combination of items to fit into a knapsack with a fixed weight capacity. It does this by considering all possible items, one by one, and using a dynamic programming table to store the maximum value attainable for different subproblems. The program will then backtrack to find the selected items for the optimal solution.
+
+For a branch and bound strategy, the program would follow a different approach. It starts by creating a search tree, with each node representing a decision point to either include or exclude an item. The program uses a bounding function to estimate the maximum value obtainable from a node, allowing it to prune (eliminate) branches of the search tree that cannot lead to an optimal solution. This strategy is often used to significantly reduce the search space and solve the problem more efficiently.
+
+Both approaches aim to maximize the total value of the selected items while adhering to the weight constraint of the knapsack, but they employ different techniques to achieve this goal. Dynamic programming guarantees an optimal solution, while branch and bound provides a faster solution by intelligently exploring the search space.
