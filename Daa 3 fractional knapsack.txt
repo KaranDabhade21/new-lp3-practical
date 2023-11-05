@@ -19,3 +19,42 @@ if __name__ == "__main__":
 	arr = [Item(60, 10), Item(100, 20), Item(120, 30)]
 	max_val = fractionalKnapsack(W, arr)
 	print ('Maximum value we can obtain = {}'.format(max_val))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Solving the Fractional Knapsack Problem using a greedy method involves finding the most valuable combination of items to fit into a knapsack with a limited weight capacity. The goal is to maximize the total value of the selected items while respecting the weight constraint. Here's a high-level explanation of how to write a program to solve the Fractional Knapsack Problem using a greedy method:
+
+1. **Input Data**:
+   - Start by defining the input data, which includes a list of items, each with a weight and a value. You also need to specify the knapsack's weight capacity.
+
+2. **Calculate Value per Unit Weight**:
+   - For each item, calculate the value per unit weight (value-to-weight ratio). This is done by dividing the value of the item by its weight.
+
+3. **Sort Items**:
+   - Sort the items based on their value-to-weight ratios in descending order. This step ensures that the most valuable items (in terms of the ratio) come first.
+
+4. **Initialize Variables**:
+   - Initialize variables to keep track of the current weight and the total value of selected items. Also, create a list to store the fractional parts of items that can't be taken as a whole.
+
+5. **Greedy Selection**:
+   - Iterate through the sorted list of items. For each item:
+     - If adding the entire item won't exceed the knapsack's weight capacity, take the whole item and update the current weight and total value.
+     - If adding the entire item would exceed the capacity, calculate how much of the item can be added to fill the remaining capacity without exceeding it. Add this fraction of the item to the knapsack and update the current weight and total value.
+
+6. **Output the Result**:
+   - The program will provide a list of selected items with their fractional parts if applicable, along with the total value of the selected items.
+
+The greedy method works in this context because it prioritizes the most valuable items first, optimizing the use of available weight capacity. The program doesn't necessarily guarantee the optimal solution, but it often provides a good approximation for large datasets. It's important to note that the Fractional Knapsack Problem allows taking fractions of items, making it suitable for the greedy approach.
